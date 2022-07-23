@@ -25,11 +25,25 @@ header {
     height: 6rem;
     background: var(--main-color);
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
     align-items: center;
 }
 
 header > h1 {
     margin-left: 1rem;
+}
+
+header > h1 + div {
+    margin-right: 2rem;
+}
+
+.fa-linkedin {
+    font-size: 3rem;
+}
+
+figure {
+    text-align: center;
 }
 
 h1 {
@@ -68,7 +82,7 @@ ul, li {
     min-height: 100rem;
 }
 
-main {
+main, #form-container {
     margin: 5rem;
     width: 70%;
     display: flex;
@@ -91,7 +105,7 @@ main > section {
 }
 
 section > aside {
-    background: #c05500;
+    background: var(--menu-text-color);
     width: 25%;
     min-height: 10rem;
     padding: 2rem;
@@ -118,6 +132,45 @@ table {
 
 dl {
     margin: 2rem;
+}
+
+#form-container > form {
+    background: var(--main-color);
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    min-height: 40rem;
+}
+
+fieldset {
+    border: none;
+}
+
+fieldset > div {
+    width: 100%;
+}
+
+fieldset > div > label, input {
+    width: 50%;
+    margin: 1rem;
+}
+
+input {
+    padding: 1.2rem;
+    width: 30rem
+}
+
+label {
+    font-size: var(--main-size);
+}
+
+button {
+    width: 40%;
+    background: var(--menu-text-color);
+    padding: 1rem;
+    border: none;
+    margin-left: 2rem;
 }
 
 
