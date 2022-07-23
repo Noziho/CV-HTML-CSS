@@ -99,6 +99,25 @@ section > aside {
 
 section > h2 {
     margin: 1rem 0 0 2rem;
+    width: 100%;
+}
+
+table, td, th {
+    text-align: center;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+table {
+    margin: 1rem;
+}
+
+.content {
+    margin: 2rem;
+}
+
+dl {
+    margin: 2rem;
 }
 
 
