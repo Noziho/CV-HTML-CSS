@@ -34,8 +34,12 @@ header > h1 {
     margin-left: 1rem;
 }
 
-header > h1 + div {
+header > h1 + div + div {
     margin-right: 2rem;
+}
+
+header > h1 + div {
+    display: none;
 }
 
 .fa-linkedin {
@@ -170,7 +174,49 @@ button {
     background: var(--menu-text-color);
     padding: 1rem;
     border: none;
-    margin-left: 2rem;
+    margin-left: 1rem;
+}
+
+@media screen and (max-width: 1100px) {
+    fieldset label, input {
+        display: block;
+    }
+
+    form button {
+        display: block;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1005px) {
+    .side-bar-container {
+        display: none;
+    }
+
+    main, #form-container {
+        width: 100%;
+    }
+
+    section > aside {
+        width: auto;
+    }
+
+    header > h1 + div {
+        display: flex;
+        font-size: var(--main-size);
+    }
+
+}
+
+@media screen and (max-width: 410px) {
+    #form-container {
+        margin: 5rem 0 0 0;
+    }
+
+    form button {
+        display: block;
+        width: 90%;
+    }
 }
 
 
