@@ -98,12 +98,14 @@ main, #form-container {
 }
 
 main > section {
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     width: 100%;
     background: var(--main-color);
     font-size: var(--main-size);
-    min-height: 20rem;
+    height: 4rem;
+    overflow: hidden;
     margin-top: 4rem;
     justify-content: space-between;
 }
