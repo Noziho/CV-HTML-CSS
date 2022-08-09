@@ -1,6 +1,7 @@
 const h1 = document.querySelector("h1");
 let h2 = document.querySelectorAll("h2");
 let section = document.querySelectorAll("section");
+let label = document.querySelectorAll("label");
 
 h1.animate([
         {
@@ -45,3 +46,8 @@ section.forEach(function (section) {
 
 })
 
+label.forEach(function (label) {
+    let table = label.innerHTML.split('');
+
+
+})
