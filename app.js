@@ -4,6 +4,7 @@ let section = document.querySelectorAll("section");
 let labelLetters = document.querySelectorAll("span.letters");
 const colors = ["red", "yellow", "green", "gray", "rebeccapurple", "purple", "aqua", "blue", "bisque", "beige"];
 const fontFamily = ["Agency FB", "Alef", "Algerian", "Amiri", "Amiri Quran", "Arial", "Arial Black", "Arial Narrow"];
+const card = document.querySelector("#card");
 
 h1.animate([
         {
@@ -64,6 +65,12 @@ labelLetters.forEach(function (letters) {
 function random (table) {
     let random = Math.trunc(Math.random() * table.length);
     return table[random];
+}
+
+card.addEventListener("click", flipCard);
+
+function flipCard() {
+    card.classList.toggle("flipCard");
 }
 
 
