@@ -42,12 +42,9 @@ setTimeout(function () {
 
 section.forEach(function (section) {
    section.addEventListener("click", function () {
-        section.style.minHeight = "30rem";
+        section.classList.toggle("height");
     })
 
-    section.addEventListener("dblclick", function () {
-        section.style.minHeight = "4rem";
-    })
 
 })
 

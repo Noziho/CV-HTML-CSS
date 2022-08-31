@@ -220,6 +220,10 @@ button {
     font-style: italic;
 }
 
+.height {
+    min-height: 30rem;
+}
+
 @media screen and (max-width: 1100px) {
     fieldset label, input, textarea {
         display: block;
