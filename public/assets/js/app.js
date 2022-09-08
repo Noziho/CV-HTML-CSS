@@ -5,8 +5,6 @@ let labelLetters = document.querySelectorAll("span.letters");
 const colors = ["red", "yellow", "green", "gray", "rebeccapurple", "purple", "aqua", "blue", "bisque", "beige"];
 const fontFamily = ["Agency FB", "Alef", "Algerian", "Amiri", "Amiri Quran", "Arial", "Arial Black", "Arial Narrow"];
 const card = document.querySelector("#card");
-const navbar = document.querySelector("#navbar");
-const dl = document.querySelector("dl");
 
 h1.animate([
         {
@@ -71,29 +69,4 @@ card.addEventListener("click", flipCard);
 function flipCard() {
     card.classList.toggle("flipCard");
 }
-
-
-fetch("ul.json")
-    .then (response => response.json())
-    .then (response => {
-        console.log(response);
-        let ul = document.createElement(response.Element.name);
-        let li = document.createElement(response.Element.secondElement);
-        let a = document.createElement(response.Element.thirdElement);
-        a.href="contact.html";
-        a.innerHTML="Contact";
-        navbar.append(ul);
-        ul.append(li);
-        li.append(a);
-    });
-
-fetch("dd.json")
-    .then (response => response.json())
-    .then (response => {
-        console.log(response);
-        let jsonDD = document.createElement(response.Element.name);
-        jsonDD.innerHTML = response.Element.content;
-        dl.append(jsonDD);
-
-    })
 
