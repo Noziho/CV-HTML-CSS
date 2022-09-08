@@ -1,9 +1,8 @@
 
 <div id="main-container">
     <div class="side-bar-container">
-        <a href=""></a>
         <nav id="navbar">
-
+            <a href="/?c=user&a=contact-us">Contact</a>
         </nav>
     </div>
 

@@ -228,6 +228,14 @@ button {
     margin-top: 1rem;
 }
 
+.error404 {
+    font-size: 4rem;
+}
+
+#askPage {
+    color: indianred;
+}
+
 @media screen and (max-width: 1100px) {
     fieldset label, input, textarea {
         display: block;

@@ -10,7 +10,9 @@ class ErrorController extends AbstractController {
     }
 
     public function error404 ($askPage) {
-        AbstractController::render('error/404');
+        AbstractController::render('error/404', [
+            "pageName" => $askPage,
+        ]);
     }
 }
 
