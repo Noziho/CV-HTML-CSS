@@ -16,7 +16,7 @@ h1.animate([
         }
 
     ],
-2500);
+500);
 
 h2.forEach(function (h2) {
     h2.style.opacity = "0";
@@ -31,11 +31,11 @@ setTimeout(function () {
             {
                 opacity: 1
             }
-        ], 2500)
+        ], 500)
         h2.style.opacity = "1";
     }
     )
-},2500)
+},1000)
 
 
 section.forEach(function (section) {

@@ -7,6 +7,10 @@ require __DIR__ . '/../Router.php';
 require __DIR__ . '/../src/Model/DB_Connect.php';
 require __DIR__ . '/../Config.php';
 
+use Symfony\Component\ErrorHandler\Debug;
+
+Debug::enable();
+
 session_start();
 
 try {
@@ -17,5 +21,3 @@ catch (ReflectionException $e) {
 }
 
 
-
-?>
