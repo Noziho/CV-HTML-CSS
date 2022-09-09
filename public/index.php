@@ -17,7 +17,7 @@ try {
     Router::route();
 }
 catch (ReflectionException $e) {
-    echo "Une erreur est survenu avec le rooter" . "<br>" . $e;
+    echo "Une erreur est survenue avec le rooter" . "<br>" . $e;
 }
 
 
