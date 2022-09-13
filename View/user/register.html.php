@@ -1,4 +1,5 @@
 <div>
+    <h1>S'inscrire</h1>
     <fieldset>
         <form action="/?c=user&a=register" method="post">
             <label for="email">Adresse e-mail:</label>

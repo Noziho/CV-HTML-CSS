@@ -74,4 +74,33 @@ class UserController extends AbstractController {
         session_destroy();
         header("Location: /?c=home");
     }
+
+    public function addSection ()
+    {
+        AbstractController::render('admin/addsomething');
+    }
+
+    public function editProfile ()
+    {
+        if (!isset($_SESSION['user'])) {
+            header("Location: /?c=home&f=notLogged");
+        }
+        AbstractController::render('user/profile', [
+            'user' => UserManager::getUserById($_SESSION['user']->getId()),
+        ]);
+    }
+
+    public function delete ()
+    {
+        if (isset($_SESSION['user'])) {
+            if (AbstractController::isAdmin()) {
+                header("Location: /c=home&f=acessDeniedAdminCantBeDeleted");
+                exit();
+            }
+
+            UserManager::deleteUser($_SESSION['user']->getId());
+            self::logOut();
+            header("Location: /?c=home");
+        }
+    }
 }

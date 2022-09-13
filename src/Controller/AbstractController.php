@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 
+use App\Model\Manager\UserManager;
+
 abstract class AbstractController {
 
     abstract public function index ();
@@ -36,5 +38,17 @@ abstract class AbstractController {
             header("Location: " . $redirect);
             exit();
         }
+    }
+
+    public static function isAdmin (): bool
+    {
+        if (isset($_SESSION['user'])) {
+            $id = $_SESSION['user']->getId();
+            $user = UserManager::getUserById($id);
+             if ($user->getRole() === "admin") {
+                 return true;
+             }
+        }
+        return false;
     }
 }

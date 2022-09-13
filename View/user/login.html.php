@@ -1,4 +1,5 @@
 <div>
+    <h1>Connexion</h1>
     <fieldset>
         <form action="/?c=user&a=login" method="post">
             <label for="email">Adresse e-mail:</label>

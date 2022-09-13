@@ -1,25 +1,44 @@
+<?php
 
+use App\Controller\AbstractController;
+
+?>
 <div id="main-container">
     <div class="side-bar-container">
         <nav id="navbar">
             <div>
                 <a href="/?c=user&a=contact-us">Contact</a>
             </div>
+            <?php
+
+            if (AbstractController::isAdmin()) {?>
+                <div>
+                    <a href="/?c=user&a=add-section">Espace admin</a>
+                </div><?php
+            }
+            ?>
+
 
             <?php
-                if (!isset($_SESSION['user'])) {?>
-                    <div>
-                        <a href="/?c=user&a=register">Inscription</a>
-                    </div>
+            if (!isset($_SESSION['user'])) { ?>
+                <div>
+                    <a href="/?c=user&a=register">Inscription</a>
+                </div>
 
-                    <div>
-                        <a href="/?c=user&a=login">Connexion</a>
-                    </div><?php
-                }else {?>
-                    <div>
-                        <a href="/?c=user&a=log-out">Se déconnecter</a>
-                    </div><?php
-                }
+                <div>
+                    <a href="/?c=user&a=login">Connexion</a>
+                </div><?php
+            } else { ?>
+                <div>
+                    <a href="/?c=user&a=edit-profile">Profil</a>
+                </div>
+
+                <div>
+                    <a href="/?c=user&a=log-out">Se déconnecter</a>
+                </div>
+
+                <?php
+            }
 
             ?>
 

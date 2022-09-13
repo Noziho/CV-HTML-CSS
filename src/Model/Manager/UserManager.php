@@ -73,4 +73,9 @@ class UserManager
         return $query ? $query->fetch()['cnt'] : 0;
     }
 
+    public static function deleteUser(int $id): void
+    {
+        DB_Connect::dbConnect()->query("DELETE FROM " . self::TABLE . " WHERE id = $id");
+    }
+
 }
