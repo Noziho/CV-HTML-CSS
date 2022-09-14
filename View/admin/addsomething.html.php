@@ -10,7 +10,7 @@ if (!AbstractController::isAdmin()) {
 <div>
     <h1>Ajoutez une section: </h1>
     <fieldset>
-        <form action="#" method="post">
+        <form action="/?c=section&a=add-section" method="post">
             <label for="title">Titre : </label>
             <input type="text" id="title" name="title" placeholder="Titre..." minlength="4" maxlength="50" required>
 

@@ -32,7 +32,7 @@ abstract class AbstractController {
         return true;
     }
 
-    public function checkRange(string $value, int $min, int $max, string $redirect): void
+    public static function checkRange(string $value, int $min, int $max, string $redirect): void
     {
         if (strlen($value) < $min || strlen($value) > $max) {
             header("Location: " . $redirect);
