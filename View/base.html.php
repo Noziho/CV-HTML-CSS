@@ -23,8 +23,9 @@
     </div>
 </header>
 
-<main><?= $html ?></main>
+<div><?= $html ?></div>
 
+<script src="/assets/js/section.js"></script>
 <script src="/assets/js/app.js"></script>
 </body>
 </html>

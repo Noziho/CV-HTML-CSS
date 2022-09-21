@@ -236,6 +236,10 @@ button {
     color: indianred;
 }
 
+#figureFlipContainer {
+    padding-left: 50rem;
+}
+
 @media screen and (max-width: 1100px) {
     fieldset label, input, textarea {
         display: block;
@@ -267,6 +271,17 @@ button {
 
 }
 
+@media screen and (max-width: 610px) {
+    #figureFlipContainer {
+        padding-left: 15rem;
+        transform: inherit;
+    }
+
+    #containerFlip {
+        margin-top: 15rem;
+    }
+}
+
 @media screen and (max-width: 410px) {
     #form-container {
         margin: 5rem 0 0 0;
@@ -277,6 +292,3 @@ button {
         width: 90%;
     }
 }
-
-
-
